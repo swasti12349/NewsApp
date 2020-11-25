@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/purple_200"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otpIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@android:dimen/app_icon_size"
+        android:fontFamily="sans-serif-medium"
+        android:text="Verify OTP"
+        android:textColor="#EBE9F1"
+        android:textColorHint="#F2F0F4"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/otpIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:elevation="10dp"/>
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="320dp"
+        android:drawableLeft="@drawable/mob"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="35dp"
+        android:drawablePadding="5dp"
+        android:hint=" Enter OTP"
+        android:padding="15dp"
+        android:textColorHint="#05010E"/>
+    <ProgressBar
+        android:id="@+id/pbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verify"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-155dp"
+        android:padding="10dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="#00000000"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Verify"
+        android:textColor="#F8F6F5"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

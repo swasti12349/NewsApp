@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/g1"
+        android:checkableBehavior="single">
+
+        <item android:title="Home"
+            android:icon="@drawable/home"
+            android:id="@+id/home"/>
+
+        <item android:title="Top Headlines"
+            android:icon="@drawable/top"
+            android:id="@+id/top"/>
+
+        <item android:title="Technology"
+            android:icon="@drawable/settings"
+            android:id="@+id/technology"/>
+
+        <item android:title="Entertainment"
+            android:icon="@drawable/entertainment"
+            android:id="@+id/entertainment"/>
+
+        <item android:title="Business"
+            android:icon="@drawable/business"
+            android:id="@+id/business"/>
+
+
+    </group>
+
+
+    <group android:id="@+id/g2"
+        android:checkableBehavior="single">
+
+        <item android:id="@+id/dev"
+            android:icon="@drawable/dev"
+            android:title="Developer Info"/>
+
+    </group>
+
+</menu>
