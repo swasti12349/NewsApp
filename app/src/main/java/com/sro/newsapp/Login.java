@@ -2,12 +2,16 @@ package com.sro.newsapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -52,6 +56,9 @@ public class Login extends AppCompatActivity {
         pb = findViewById(R.id.pbl);
         userid = "";
         passwords = "";
+
+
+
 
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("user");
