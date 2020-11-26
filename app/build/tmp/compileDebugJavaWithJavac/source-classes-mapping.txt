@@ -15,10 +15,8 @@ com/sro/newsapp/top.java
 com/sro/newsapp/MainActivity.java
  com.sro.newsapp.MainActivity
  com.sro.newsapp.MainActivity$1
-com/sro/newsapp/Login.java
- com.sro.newsapp.Login
- com.sro.newsapp.Login$1
- com.sro.newsapp.Login$1$1
+com/sro/newsapp/contact.java
+ com.sro.newsapp.contact
 com/sro/newsapp/business.java
  com.sro.newsapp.business
  com.sro.newsapp.business$fetchData
@@ -30,8 +28,6 @@ com/sro/newsapp/entertainment.java
 com/sro/newsapp/home.java
  com.sro.newsapp.home
  com.sro.newsapp.home$fetchData
-com/sro/newsapp/contact.java
- com.sro.newsapp.contact
 com/sro/newsapp/otp.java
  com.sro.newsapp.otp
  com.sro.newsapp.otp$1
@@ -41,3 +37,7 @@ com/sro/newsapp/Register.java
  com.sro.newsapp.Register
  com.sro.newsapp.Register$1
  com.sro.newsapp.Register$registerDetail
+com/sro/newsapp/Login.java
+ com.sro.newsapp.Login
+ com.sro.newsapp.Login$1
+ com.sro.newsapp.Login$1$1

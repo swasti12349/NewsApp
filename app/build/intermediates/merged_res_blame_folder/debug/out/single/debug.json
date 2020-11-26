@@ -176,6 +176,10 @@
         "source": "F:\\Android Projects\\NewsApp\\app\\src\\main\\res\\layout\\fragment_business.xml"
     },
     {
+        "merged": "F:\\Android Projects\\NewsApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pbb.xml.flat",
+        "source": "F:\\Android Projects\\NewsApp\\app\\src\\main\\res\\drawable\\pbb.xml"
+    },
+    {
         "merged": "F:\\Android Projects\\NewsApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_header.xml.flat",
         "source": "F:\\Android Projects\\NewsApp\\app\\src\\main\\res\\layout\\header.xml"
     },

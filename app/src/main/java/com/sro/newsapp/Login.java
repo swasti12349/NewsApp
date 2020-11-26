@@ -35,6 +35,7 @@ public class Login extends AppCompatActivity {
     String userid, passwords;
     FirebaseDatabase database;
     DatabaseReference reference;
+    ProgressBar pb;
 
     private FirebaseAuth mAuth;
     public FirebaseAuth.AuthStateListener authStateListener;
@@ -48,6 +49,7 @@ public class Login extends AppCompatActivity {
         password = findViewById(R.id.password);
         mAuth = FirebaseAuth.getInstance();
         button = findViewById(R.id.login);
+        pb = findViewById(R.id.pbl);
         userid = "";
         passwords = "";
 
@@ -71,6 +73,7 @@ public class Login extends AppCompatActivity {
                     password.requestFocus();}
 
                 if (!userid.isEmpty() && !passwords.isEmpty()){
+                    pb.setVisibility(View.VISIBLE);
                 Query checkUser = reference.orderByChild("mob").equalTo(userid);
                 checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -88,11 +91,13 @@ public class Login extends AppCompatActivity {
                                 intent.putExtra("emailid", emailDB);
                                 startActivity(intent);
                             } else {
+                                pb.setVisibility(View.INVISIBLE);
                                 password.setError("Wrong Password");
                                 password.requestFocus();
 
                             }
                         } else {
+                            pb.setVisibility(View.INVISIBLE);
                             email.setError("Not Registered");
                             email.requestFocus();
                         }

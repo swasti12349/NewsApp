@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:layout_below="@+id/t2"
-        android:text="Phone: 9507972006"
+        android:text="Contact: 9507972006"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="1dp"
