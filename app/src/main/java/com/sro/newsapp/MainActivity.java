@@ -95,6 +95,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        statusBar.setBackgroundColor(color);
+>>>>>>> 1b931271d07d59780e57153630a9f575fdfabdfc
+>>>>>>> 06b2534e52a54ee59037091c5908d5098c9c8195
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.setStatusBarColor(ContextCompat.getColor(this, R.color.my_statusbar_color));
         }
