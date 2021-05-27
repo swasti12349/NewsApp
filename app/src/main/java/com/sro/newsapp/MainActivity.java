@@ -4,12 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -22,8 +26,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,13 +47,11 @@ import java.net.URL;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
-
-
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
     ActionBarDrawerToggle toggle;
-    TextView emailnav,user;
+    TextView emailnav, user;
 
 
     @Override
@@ -59,13 +65,38 @@ public class MainActivity extends AppCompatActivity {
         Window window = getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+
+            NotificationChannel channel = new NotificationChannel("nit","channelname", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+//
+//        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,"mynotification")
+//                .setContentTitle("This is my title")
+//                .setSmallIcon(R.drawable.iconapp)
+//                .setAutoCancel(true)
+//                .setContentText("This is my content");
+//
+//        NotificationManagerCompat manager = NotificationManagerCompat.from(this);
+//        manager.notify(989,builder.build());
+//
+        FirebaseMessaging.getInstance().subscribeToTopic("general")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        String msg = "Successfull";
+                        if (!task.isSuccessful()) {
+                            msg = "Failed";
+                        }
+                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-<<<<<<< HEAD
-=======
-        statusBar.setBackgroundColor(color);
->>>>>>> 1b931271d07d59780e57153630a9f575fdfabdfc
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window.setStatusBarColor(ContextCompat.getColor(this,R.color.my_statusbar_color));
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.my_statusbar_color));
         }
         View v = navigationView.getHeaderView(0);
         TextView receive1 = (TextView) v.findViewById(R.id.emailnav);
@@ -75,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         receive2.setText(getIntent().getStringExtra("name"));
 
 
-        if(savedInstanceState==null){
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new home()).commit();
             navigationView.setCheckedItem(R.id.home);
         }
@@ -86,11 +117,10 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
 
 
-
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
 
                     case R.id.home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new home()).commit();
@@ -116,8 +146,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                 }
+
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
+
             }
         });
 

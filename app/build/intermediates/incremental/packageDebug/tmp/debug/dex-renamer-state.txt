@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#Sun Nov 29 16:00:11 IST 2020
-=======
-#Thu Nov 26 11:27:59 IST 2020
->>>>>>> 1b931271d07d59780e57153630a9f575fdfabdfc
-base.0=F\:\\Android Projects\\NewsApp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
+#Thu May 27 15:33:05 IST 2021
+base.0=E\:\\Android Projects\\NewsApp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
+path.0=classes.dex

@@ -83,9 +83,10 @@ public class Register extends AppCompatActivity {
                         }else {
                             String mobiles = mob.getText().toString();
                             Toast.makeText(Register.this,"Registered",Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(),otp.class);
+                            Intent intent = new Intent(Register.this,otp.class);
                             intent.putExtra("otps",mobiles);
                             startActivity(intent);
+                            finish();
 
 
                         }

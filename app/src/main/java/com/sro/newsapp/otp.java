@@ -3,6 +3,7 @@ package com.sro.newsapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -44,11 +45,7 @@ public class otp extends AppCompatActivity {
         pbo.setVisibility(View.GONE);
         mAuth = FirebaseAuth.getInstance();
 
-//        relativeLayout = findViewById(R.id.otpxml);
-//        AnimationDrawable animationDrawable = (AnimationDrawable) relativeLayout.getBackground();
-//        animationDrawable.setEnterFadeDuration(2000);
-//        animationDrawable.setExitFadeDuration(4000);
-//        animationDrawable.start();
+
 
         String phNo = getIntent().getStringExtra("otps");
 
@@ -74,7 +71,7 @@ public class otp extends AppCompatActivity {
                 "+91" + phNo,
                 60,
                 TimeUnit.SECONDS,
-                TaskExecutors.MAIN_THREAD,
+                otp.this,
                 mCallbacks);
     }
 
@@ -113,7 +110,8 @@ public class otp extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    startActivity(new Intent(getApplicationContext(), Login.class));
+                    Toast.makeText(otp.this,"Registered Successfully", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(otp.this, Login.class));
                     finish();
                 } else {
                     Toast.makeText(otp.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();

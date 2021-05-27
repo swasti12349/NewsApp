@@ -74,8 +74,6 @@ public class rv extends RecyclerView.Adapter<rv.myViewHolder> {
             }
         });
         Picasso.with(context).load(imgLinks[position]).into(holder.imageView);
-
-
     }
 
     @Override

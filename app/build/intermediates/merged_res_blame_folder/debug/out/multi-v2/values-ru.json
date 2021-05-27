@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\Android Projects\\NewsApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru\\values-ru.xml",
+            "outputFile": "E:\\Android Projects\\NewsApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru\\values-ru.xml",
             "map": [
                 {
                     "source": "C:\\Users\\swast\\.gradle\\caches\\transforms-2\\files-2.1\\dfa7e7b371fd75959fbffbd4878330de\\browser-1.2.0\\res\\values-ru\\values-ru.xml",
@@ -30,28 +30,28 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "52",
+                        "startLines": "53",
                         "startColumns": "4",
-                        "startOffsets": "6095",
+                        "startOffsets": "6200",
                         "endColumns": "100",
-                        "endOffsets": "6191"
+                        "endOffsets": "6296"
                     }
                 },
                 {
-                    "source": "C:\\Users\\swast\\.gradle\\caches\\transforms-2\\files-2.1\\c03ff831f337462821d0a5c03495569e\\jetified-play-services-basement-17.0.0\\res\\values-ru\\values.xml",
+                    "source": "C:\\Users\\swast\\.gradle\\caches\\transforms-2\\files-2.1\\0ef514cb9c6783fd4e104bc1487eb9d0\\jetified-firebase-messaging-21.0.0\\res\\values-ru\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "215",
-                        "endOffsets": "462"
+                        "startOffsets": "207",
+                        "endColumns": "100",
+                        "endOffsets": "307"
                     },
                     "to": {
-                        "startLines": "37",
+                        "startLines": "51",
                         "startColumns": "4",
-                        "startOffsets": "3979",
-                        "endColumns": "215",
-                        "endOffsets": "4190"
+                        "startOffsets": "6013",
+                        "endColumns": "104",
+                        "endOffsets": "6113"
                     }
                 },
                 {
@@ -81,11 +81,28 @@
                         "endOffsets": "215,317,416,502,607,728,807,883,975,1069,1164,1257,1352,1446,1542,1637,1729,1821,1910,2016,2123,2221,2330,2437,2551,2717,2817,2899"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,51",
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,52",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,220,322,421,507,612,733,812,888,980,1074,1169,1262,1357,1451,1547,1642,1734,1826,1915,2021,2128,2226,2335,2442,2556,2722,6013",
+                        "startOffsets": "105,220,322,421,507,612,733,812,888,980,1074,1169,1262,1357,1451,1547,1642,1734,1826,1915,2021,2128,2226,2335,2442,2556,2722,6118",
                         "endColumns": "114,101,98,85,104,120,78,75,91,93,94,92,94,93,95,94,91,91,88,105,106,97,108,106,113,165,99,81",
-                        "endOffsets": "215,317,416,502,607,728,807,883,975,1069,1164,1257,1352,1446,1542,1637,1729,1821,1910,2016,2123,2221,2330,2437,2551,2717,2817,6090"
+                        "endOffsets": "215,317,416,502,607,728,807,883,975,1069,1164,1257,1352,1446,1542,1637,1729,1821,1910,2016,2123,2221,2330,2437,2551,2717,2817,6195"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\swast\\.gradle\\caches\\transforms-2\\files-2.1\\c77d530a894c9cdc1e02ae73843c5ba2\\jetified-play-services-basement-17.1.0\\res\\values-ru\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "215",
+                        "endOffsets": "462"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3979",
+                        "endColumns": "215",
+                        "endOffsets": "4190"
                     }
                 }
             ]
